@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f3f4f6"/>
+  <rect x="50" y="50" width="700" height="500" rx="10" fill="#e5e7eb"/>
+  <rect x="100" y="100" width="600" height="50" rx="5" fill="#d1d5db"/>
+  <text x="400" y="135" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="24" font-weight="bold">DesktopMate</text>
+  <circle cx="200" cy="300" r="80" fill="#9ca3af"/>
+  <rect x="350" y="240" width="300" height="20" rx="10" fill="#9ca3af"/>
+  <rect x="350" y="280" width="250" height="20" rx="10" fill="#9ca3af"/>
+  <rect x="350" y="320" width="280" height="20" rx="10" fill="#9ca3af"/>
+  <rect x="350" y="360" width="200" height="20" rx="10" fill="#9ca3af"/>
+  <text x="400" y="480" text-anchor="middle" fill="#9ca3af" font-family="Arial, sans-serif" font-size="16">スクリーンショット</text>
+</svg>
