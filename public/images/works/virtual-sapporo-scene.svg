@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#93c5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbeafe;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Building gradients -->
+    <linearGradient id="tower1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d1d5db;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tower2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e5e7eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="station" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glass effect -->
+    <linearGradient id="glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="buildingShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="6" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1200" height="800" fill="url(#skyGrad)"/>
+  
+  <!-- Clouds -->
+  <ellipse cx="200" cy="150" rx="60" ry="20" fill="white" opacity="0.8"/>
+  <ellipse cx="180" cy="160" rx="40" ry="15" fill="white" opacity="0.8"/>
+  <ellipse cx="220" cy="165" rx="45" ry="18" fill="white" opacity="0.8"/>
+  
+  <ellipse cx="800" cy="120" rx="80" ry="25" fill="white" opacity="0.6"/>
+  <ellipse cx="770" cy="130" rx="50" ry="18" fill="white" opacity="0.6"/>
+  <ellipse cx="830" cy="135" rx="60" ry="22" fill="white" opacity="0.6"/>
+  
+  <!-- Ground/Platform -->
+  <rect x="0" y="600" width="1200" height="200" fill="#1f2937"/>
+  <rect x="0" y="580" width="1200" height="20" fill="#374151"/>
+  
+  <!-- Main JR Tower (center) -->
+  <rect x="500" y="200" width="200" height="400" fill="url(#tower1)" filter="url(#buildingShadow)"/>
+  
+  <!-- Tower details -->
+  <!-- Windows pattern -->
+  <g opacity="0.7">
+    <!-- Row 1 -->
+    <rect x="520" y="220" width="20" height="25" fill="url(#glass)"/>
+    <rect x="550" y="220" width="20" height="25" fill="url(#glass)"/>
+    <rect x="580" y="220" width="20" height="25" fill="url(#glass)"/>
+    <rect x="610" y="220" width="20" height="25" fill="url(#glass)"/>
+    <rect x="640" y="220" width="20" height="25" fill="url(#glass)"/>
+    <rect x="670" y="220" width="20" height="25" fill="url(#glass)"/>
+    
+    <!-- Row 2 -->
+    <rect x="520" y="260" width="20" height="25" fill="url(#glass)"/>
+    <rect x="550" y="260" width="20" height="25" fill="url(#glass)"/>
+    <rect x="580" y="260" width="20" height="25" fill="url(#glass)"/>
+    <rect x="610" y="260" width="20" height="25" fill="url(#glass)"/>
+    <rect x="640" y="260" width="20" height="25" fill="url(#glass)"/>
+    <rect x="670" y="260" width="20" height="25" fill="url(#glass)"/>
+    
+    <!-- Continue pattern -->
+    <rect x="520" y="300" width="20" height="25" fill="url(#glass)"/>
+    <rect x="550" y="300" width="20" height="25" fill="url(#glass)"/>
+    <rect x="580" y="300" width="20" height="25" fill="url(#glass)"/>
+    <rect x="610" y="300" width="20" height="25" fill="url(#glass)"/>
+    <rect x="640" y="300" width="20" height="25" fill="url(#glass)"/>
+    <rect x="670" y="300" width="20" height="25" fill="url(#glass)"/>
+    
+    <rect x="520" y="340" width="20" height="25" fill="url(#glass)"/>
+    <rect x="550" y="340" width="20" height="25" fill="url(#glass)"/>
+    <rect x="580" y="340" width="20" height="25" fill="url(#glass)"/>
+    <rect x="610" y="340" width="20" height="25" fill="url(#glass)"/>
+    <rect x="640" y="340" width="20" height="25" fill="url(#glass)"/>
+    <rect x="670" y="340" width="20" height="25" fill="url(#glass)"/>
+  </g>
+  
+  <!-- Supporting buildings -->
+  <rect x="300" y="350" width="120" height="250" fill="url(#tower2)" filter="url(#buildingShadow)"/>
+  <rect x="750" y="320" width="100" height="280" fill="url(#tower2)" filter="url(#buildingShadow)"/>
+  <rect x="180" y="400" width="80" height="200" fill="url(#tower2)" filter="url(#buildingShadow)"/>
+  <rect x="900" y="380" width="90" height="220" fill="url(#tower2)" filter="url(#buildingShadow)"/>
+  
+  <!-- Station building (lower) -->
+  <rect x="450" y="500" width="300" height="100" fill="url(#station)" filter="url(#buildingShadow)"/>
+  <text x="600" y="560" text-anchor="middle" fill="#1f2937" font-family="Noto Sans JP, sans-serif" font-size="24" font-weight="bold">札幌駅</text>
+  <text x="600" y="585" text-anchor="middle" fill="#1f2937" font-family="Noto Sans JP, sans-serif" font-size="16">JR TOWER</text>
+  
+  <!-- Virtual UI elements -->
+  <!-- Floating info panels -->
+  <rect x="50" y="50" width="200" height="80" rx="8" fill="rgba(59, 130, 246, 0.9)" filter="url(#glow)"/>
+  <text x="150" y="75" text-anchor="middle" fill="white" font-family="Noto Sans JP, sans-serif" font-size="14" font-weight="600">バーチャルマーケット</text>
+  <text x="150" y="95" text-anchor="middle" fill="white" font-family="Noto Sans JP, sans-serif" font-size="12">参加者: 1,247人</text>
+  <text x="150" y="110" text-anchor="middle" fill="white" font-family="Noto Sans JP, sans-serif" font-size="12">アクティブ中</text>
+  
+  <!-- Navigation waypoints -->
+  <circle cx="600" cy="480" r="15" fill="#10b981" opacity="0.8" filter="url(#glow)"/>
+  <text x="600" y="485" text-anchor="middle" fill="white" font-family="sans-serif" font-size="10" font-weight="bold">駅</text>
+  
+  <circle cx="350" cy="320" r="12" fill="#f59e0b" opacity="0.8" filter="url(#glow)"/>
+  <text x="350" y="325" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8" font-weight="bold">店舗</text>
+  
+  <circle cx="800" cy="290" r="12" fill="#ef4444" opacity="0.8" filter="url(#glow)"/>
+  <text x="800" y="295" text-anchor="middle" fill="white" font-family="sans-serif" font-size="8" font-weight="bold">展望</text>
+  
+  <!-- Avatar indicators -->
+  <circle cx="580" cy="570" r="8" fill="#8b5cf6"/>
+  <circle cx="620" cy="565" r="8" fill="#ec4899"/>
+  <circle cx="610" cy="575" r="8" fill="#06b6d4"/>
+  
+  <!-- Virtual snow effect -->
+  <g opacity="0.6">
+    <circle cx="100" cy="250" r="2" fill="white"/>
+    <circle cx="300" cy="180" r="1.5" fill="white"/>
+    <circle cx="500" cy="300" r="2" fill="white"/>
+    <circle cx="700" cy="220" r="1" fill="white"/>
+    <circle cx="900" cy="270" r="1.5" fill="white"/>
+    <circle cx="1100" cy="200" r="2" fill="white"/>
+    <circle cx="150" cy="400" r="1" fill="white"/>
+    <circle cx="450" cy="350" r="1.5" fill="white"/>
+    <circle cx="850" cy="380" r="1" fill="white"/>
+  </g>
+  
+  <!-- Bottom HUD -->
+  <rect x="0" y="720" width="1200" height="80" fill="rgba(31, 41, 55, 0.9)"/>
+  <text x="600" y="745" text-anchor="middle" fill="white" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="600">バーチャル札幌駅 JRタワー - さつえき.world</text>
+  <text x="600" y="765" text-anchor="middle" fill="#9ca3af" font-family="Noto Sans JP, sans-serif" font-size="12">Powered by Unity • VRChat対応 • リアルタイム3D環境</text>
+  <text x="600" y="785" text-anchor="middle" fill="#6b7280" font-family="Noto Sans JP, sans-serif" font-size="10">札幌駅総合開発株式会社 × ユニティア株式会社</text>
+</svg>

@@ -24,7 +24,7 @@ function HomePage() {
           <div 
             className="absolute inset-0 opacity-20"
             style={{
-              backgroundImage: 'url(/images/hero/hero-bg.svg)',
+              backgroundImage: 'url(/images/hero/hero-bg-enhanced.svg)',
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
