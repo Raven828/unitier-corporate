@@ -14,7 +14,7 @@ export default function WorksPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
             <img 
-              src="/images/works/desktopmate-placeholder.svg" 
+              src="/images/works/desktopmate-screenshot.svg" 
               alt="DesktopMate スクリーンショット" 
               className="w-full aspect-video rounded-lg shadow-lg object-cover"
             />
@@ -40,7 +40,7 @@ export default function WorksPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="md:order-2">
             <img 
-              src="/images/works/virtual-sapporo-placeholder.svg" 
+              src="/images/works/virtual-sapporo-scene.svg" 
               alt="バーチャル札幌駅JRタワー" 
               className="w-full aspect-video rounded-lg shadow-lg object-cover"
             />

@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#b0e0e6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="towerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cbd5e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#94a3b8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cbd5e1;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddd6fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a5b4fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="uiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1200" height="600" fill="url(#skyGrad)"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="600" width="1200" height="200" fill="#e2e8f0"/>
+  
+  <!-- Grid floor pattern -->
+  <g opacity="0.3">
+    <defs>
+      <pattern id="floorGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#94a3b8" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="600" width="1200" height="200" fill="url(#floorGrid)"/>
+  </g>
+  
+  <!-- Background buildings -->
+  <g opacity="0.6">
+    <rect x="50" y="450" width="80" height="150" fill="url(#buildingGrad1)" filter="url(#shadow)"/>
+    <rect x="150" y="420" width="60" height="180" fill="url(#buildingGrad2)" filter="url(#shadow)"/>
+    <rect x="230" y="480" width="70" height="120" fill="url(#buildingGrad1)" filter="url(#shadow)"/>
+    <rect x="950" y="380" width="90" height="220" fill="url(#buildingGrad1)" filter="url(#shadow)"/>
+    <rect x="1060" y="420" width="75" height="180" fill="url(#buildingGrad2)" filter="url(#shadow)"/>
+  </g>
+  
+  <!-- Main JR Tower -->
+  <g>
+    <!-- Tower base -->
+    <rect x="500" y="350" width="200" height="250" fill="url(#towerGrad)" filter="url(#shadow)"/>
+    <!-- Tower upper section -->
+    <rect x="520" y="200" width="160" height="150" fill="url(#towerGrad)" filter="url(#shadow)"/>
+    <!-- Tower top -->
+    <rect x="550" y="120" width="100" height="80" fill="url(#towerGrad)" filter="url(#shadow)"/>
+    <!-- Spire -->
+    <rect x="590" y="80" width="20" height="40" fill="url(#towerGrad)"/>
+    <polygon points="600,80 590,60 610,60" fill="#f59e0b" filter="url(#glow)"/>
+    
+    <!-- Windows on tower -->
+    <g>
+      <!-- Main building windows -->
+      <rect x="520" y="370" width="15" height="20" fill="#3b82f6" opacity="0.8"/>
+      <rect x="545" y="370" width="15" height="20" fill="#3b82f6" opacity="0.8"/>
+      <rect x="570" y="370" width="15" height="20" fill="#f59e0b" opacity="0.8"/>
+      <rect x="595" y="370" width="15" height="20" fill="#3b82f6" opacity="0.8"/>
+      <rect x="620" y="370" width="15" height="20" fill="#3b82f6" opacity="0.8"/>
+      <rect x="645" y="370" width="15" height="20" fill="#10b981" opacity="0.8"/>
+      <rect x="670" y="370" width="15" height="20" fill="#3b82f6" opacity="0.8"/>
+      
+      <!-- Upper floors -->
+      <rect x="540" y="230" width="12" height="15" fill="#3b82f6" opacity="0.8"/>
+      <rect x="560" y="230" width="12" height="15" fill="#f59e0b" opacity="0.8"/>
+      <rect x="580" y="230" width="12" height="15" fill="#3b82f6" opacity="0.8"/>
+      <rect x="600" y="230" width="12" height="15" fill="#10b981" opacity="0.8"/>
+      <rect x="620" y="230" width="12" height="15" fill="#3b82f6" opacity="0.8"/>
+      <rect x="640" y="230" width="12" height="15" fill="#3b82f6" opacity="0.8"/>
+    </g>
+    
+    <!-- JR Tower sign -->
+    <rect x="520" y="320" width="160" height="25" fill="#1f2937"/>
+    <text x="600" y="338" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">JR TOWER</text>
+  </g>
+  
+  <!-- Station platform -->
+  <rect x="300" y="580" width="600" height="20" fill="#64748b"/>
+  <rect x="300" y="570" width="600" height="10" fill="#f1f5f9"/>
+  
+  <!-- Train -->
+  <g>
+    <rect x="320" y="530" width="200" height="40" rx="20" fill="#ef4444" filter="url(#shadow)"/>
+    <rect x="340" y="540" width="30" height="20" fill="#1e293b" opacity="0.8"/>
+    <rect x="380" y="540" width="30" height="20" fill="#1e293b" opacity="0.8"/>
+    <rect x="420" y="540" width="30" height="20" fill="#1e293b" opacity="0.8"/>
+    <rect x="460" y="540" width="30" height="20" fill="#1e293b" opacity="0.8"/>
+    <!-- Train wheels -->
+    <circle cx="345" cy="575" r="8" fill="#374151"/>
+    <circle cx="375" cy="575" r="8" fill="#374151"/>
+    <circle cx="445" cy="575" r="8" fill="#374151"/>
+    <circle cx="475" cy="575" r="8" fill="#374151"/>
+    <!-- JR logo -->
+    <circle cx="420" cy="550" r="12" fill="white"/>
+    <text x="420" y="555" text-anchor="middle" fill="#ef4444" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JR</text>
+  </g>
+  
+  <!-- Avatars/Users in the metaverse -->
+  <g>
+    <!-- Avatar 1 -->
+    <ellipse cx="400" cy="590" rx="8" ry="12" fill="#fbbf24"/>
+    <rect x="395" y="595" width="10" height="15" fill="#3b82f6" rx="2"/>
+    
+    <!-- Avatar 2 -->
+    <ellipse cx="450" cy="590" rx="8" ry="12" fill="#f472b6"/>
+    <rect x="445" y="595" width="10" height="15" fill="#10b981" rx="2"/>
+    
+    <!-- Avatar 3 -->
+    <ellipse cx="750" cy="590" rx="8" ry="12" fill="#8b5cf6"/>
+    <rect x="745" y="595" width="10" height="15" fill="#ef4444" rx="2"/>
+  </g>
+  
+  <!-- VR/Metaverse UI elements -->
+  <g>
+    <!-- Main UI panel -->
+    <rect x="50" y="50" width="300" height="100" rx="10" fill="url(#uiGrad)" filter="url(#shadow)" opacity="0.9"/>
+    <text x="200" y="75" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Virtual Sapporo Station</text>
+    <text x="200" y="95" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Current Location: JR Tower Plaza</text>
+    <text x="200" y="115" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Users Online: 847</text>
+    <circle cx="320" cy="70" r="8" fill="#10b981" filter="url(#glow)"/>
+    <text x="335" y="75" fill="white" font-family="Arial, sans-serif" font-size="10">LIVE</text>
+    
+    <!-- Minimap -->
+    <rect x="850" y="50" width="300" height="150" rx="10" fill="rgba(15,23,42,0.8)" filter="url(#shadow)"/>
+    <text x="1000" y="75" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">MAP</text>
+    <!-- Minimap content -->
+    <rect x="870" y="85" width="260" height="110" fill="#1e293b" rx="5"/>
+    <rect x="980" y="120" width="40" height="40" fill="#3b82f6"/>
+    <circle cx="1000" cy="140" r="3" fill="#f59e0b" filter="url(#glow)"/>
+    <text x="1000" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">YOU ARE HERE</text>
+    
+    <!-- Action buttons -->
+    <rect x="50" y="680" width="80" height="30" rx="15" fill="rgba(59,130,246,0.8)"/>
+    <text x="90" y="700" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Teleport</text>
+    
+    <rect x="150" y="680" width="60" height="30" rx="15" fill="rgba(16,185,129,0.8)"/>
+    <text x="180" y="700" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Chat</text>
+    
+    <rect x="230" y="680" width="70" height="30" rx="15" fill="rgba(139,92,246,0.8)"/>
+    <text x="265" y="700" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Events</text>
+  </g>
+  
+  <!-- Floating information panels -->
+  <g opacity="0.8">
+    <rect x="750" y="300" width="180" height="60" rx="8" fill="rgba(30,41,59,0.9)" filter="url(#shadow)"/>
+    <text x="840" y="320" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Shop Information</text>
+    <text x="840" y="335" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Daimaru Department Store</text>
+    <text x="840" y="350" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Click to Enter →</text>
+    
+    <rect x="200" y="400" width="160" height="50" rx="8" fill="rgba(30,41,59,0.9)" filter="url(#shadow)"/>
+    <text x="280" y="420" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Station Platform</text>
+    <text x="280" y="435" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="10">Next Train: 2 min</text>
+  </g>
+  
+  <!-- Particle effects -->
+  <g opacity="0.6">
+    <circle cx="600" cy="100" r="2" fill="#fbbf24" filter="url(#glow)"/>
+    <circle cx="300" cy="150" r="1.5" fill="#3b82f6" filter="url(#glow)"/>
+    <circle cx="900" cy="200" r="2" fill="#10b981" filter="url(#glow)"/>
+    <circle cx="150" cy="250" r="1" fill="#f472b6" filter="url(#glow)"/>
+    <circle cx="1050" cy="180" r="1.5" fill="#8b5cf6" filter="url(#glow)"/>
+  </g>
+</svg>

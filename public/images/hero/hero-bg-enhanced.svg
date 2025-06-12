@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#334155;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.4" />
+    </linearGradient>
+    <pattern id="techGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="1"/>
+    </pattern>
+    <pattern id="circuit" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="50" cy="50" r="2" fill="rgba(59,130,246,0.3)"/>
+      <path d="M50,30 L50,70 M30,50 L70,50" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base gradient -->
+  <rect width="1920" height="1080" fill="url(#heroGradient)"/>
+  
+  <!-- Tech grid overlay -->
+  <rect width="1920" height="1080" fill="url(#techGrid)"/>
+  
+  <!-- Circuit pattern -->
+  <rect x="0" y="0" width="1920" height="300" fill="url(#circuit)" opacity="0.3"/>
+  <rect x="0" y="780" width="1920" height="300" fill="url(#circuit)" opacity="0.3"/>
+  
+  <!-- Geometric shapes for tech aesthetic -->
+  <polygon points="200,200 400,100 600,300 400,400" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+  <polygon points="1320,700 1520,600 1720,800 1520,900" fill="rgba(139,92,246,0.1)" stroke="rgba(139,92,246,0.3)" stroke-width="2"/>
+  
+  <!-- Data visualization elements -->
+  <g opacity="0.4">
+    <!-- Bar chart representation -->
+    <rect x="100" y="600" width="20" height="100" fill="#3b82f6"/>
+    <rect x="130" y="650" width="20" height="50" fill="#8b5cf6"/>
+    <rect x="160" y="580" width="20" height="120" fill="#06b6d4"/>
+    <rect x="190" y="620" width="20" height="80" fill="#10b981"/>
+    
+    <!-- Line graph -->
+    <polyline points="1600,300 1650,250 1700,280 1750,200 1800,220" 
+              fill="none" stroke="#3b82f6" stroke-width="3" opacity="0.6"/>
+    <circle cx="1600" cy="300" r="4" fill="#3b82f6"/>
+    <circle cx="1650" cy="250" r="4" fill="#3b82f6"/>
+    <circle cx="1700" cy="280" r="4" fill="#3b82f6"/>
+    <circle cx="1750" cy="200" r="4" fill="#3b82f6"/>
+    <circle cx="1800" cy="220" r="4" fill="#3b82f6"/>
+  </g>
+  
+  <!-- VR/AR elements -->
+  <g opacity="0.3">
+    <!-- VR headset silhouette -->
+    <rect x="800" y="150" width="320" height="100" rx="50" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+    <circle cx="860" cy="200" r="30" fill="none" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+    <circle cx="1060" cy="200" r="30" fill="none" stroke="rgba(59,130,246,0.4)" stroke-width="2"/>
+    
+    <!-- AR elements -->
+    <rect x="1400" y="450" width="80" height="60" fill="rgba(139,92,246,0.2)" stroke="rgba(139,92,246,0.4)" stroke-width="1"/>
+    <text x="1440" y="485" text-anchor="middle" fill="rgba(139,92,246,0.6)" font-family="Arial, sans-serif" font-size="12">AR</text>
+  </g>
+  
+  <!-- Particle effects -->
+  <g opacity="0.4">
+    <circle cx="300" cy="400" r="3" fill="#3b82f6"/>
+    <circle cx="500" cy="600" r="2" fill="#8b5cf6"/>
+    <circle cx="1200" cy="350" r="4" fill="#06b6d4"/>
+    <circle cx="1500" cy="750" r="3" fill="#10b981"/>
+    <circle cx="800" cy="800" r="2" fill="#f59e0b"/>
+    <circle cx="1100" cy="200" r="3" fill="#ef4444"/>
+  </g>
+  
+  <!-- Accent overlay -->
+  <rect x="0" y="0" width="1920" height="100" fill="url(#accentGrad)" opacity="0.6"/>
+  <rect x="0" y="980" width="1920" height="100" fill="url(#accentGrad)" opacity="0.6"/>
+  
+  <!-- Central focal point -->
+  <circle cx="960" cy="540" r="400" fill="none" stroke="rgba(59,130,246,0.1)" stroke-width="2"/>
+  <circle cx="960" cy="540" r="300" fill="none" stroke="rgba(139,92,246,0.1)" stroke-width="1"/>
+  <circle cx="960" cy="540" r="200" fill="none" stroke="rgba(6,182,212,0.1)" stroke-width="1"/>
+</svg>
